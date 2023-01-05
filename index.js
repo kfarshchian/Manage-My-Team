@@ -18,3 +18,33 @@
 // THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 // WHEN I decide to finish building my team
 // THEN I exit the application, and the HTML is generated
+
+const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require("./dist/index.html");
+
+const questions = () =>{ 
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'projectName',
+            message: 'What is your project name?',
+        },
+    ]);
+};
+
+function init() {
+    questions()
+    .then((data) => {
+        console.log(data);
+        return fs.writeFileSync("./README.md", generateMarkdown(data));
+      })
+      .catch((err) => {
+        if (err) {
+          throw err;
+        }
+      });
+}
+
+// Function call to initialize app
+init();
