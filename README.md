@@ -18,7 +18,8 @@
   - [Questions](#Questions)
   
   ## Installation
-  - NPM install - npm i inquirer@8.2.4 
+  - NPM install
+  - npm i inquirer@8.2.4 
 
   ## Usage
   ![alttext](./assets/images/{add name of picture here})
