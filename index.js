@@ -1,6 +1,3 @@
-
-
-
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for my team members and their information
 // THEN an HTML file is generated that displays a nicely formatted team roster based on user input
@@ -21,23 +18,49 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./dist/index.html");
+const generateMarkdown = require("./src/generateMarkdown");
+const Manager = require('./lib/manager')
+const Intern = require('./lib/intern')
+const Engineer = require('./lib/engineer')
+const allEmployees = [];
 
-const questions = () =>{ 
+const getManager = () =>{ 
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'projectName',
-            message: 'What is your project name?',
+            name: 'name',
+            message: 'What is the managers name?',
         },
-    ]);
+        {
+          type: 'input',
+          name: 'id',
+          message: 'What is the managers employee ID?',
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is the managers email?',
+        },
+        {
+          type: 'input',
+          name: 'officeNumber',
+          message: 'What is the managers officeNumber?',
+        },
+    ])
+    .then(managerInput => {
+      const  { name, id, email, officeNumber } = managerInput; 
+      const manager = new Manager (name, id, email, officeNumber);
+
+      allEmployees.push(manager); 
+      console.log(allEmployees); 
+  })
 };
 
 function init() {
-    questions()
+    getManager()
     .then((data) => {
         console.log(data);
-        return fs.writeFileSync("./README.md", generateMarkdown(data));
+        return fs.writeFileSync("./dist/index.html", generateMarkdown(data));
       })
       .catch((err) => {
         if (err) {
