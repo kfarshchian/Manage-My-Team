@@ -18,7 +18,7 @@
   - [Questions](#Questions)
   
   ## Installation
-  - NPM install
+  - npm install
   - npm i inquirer@8.2.4 
 
   ## Usage
