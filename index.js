@@ -102,10 +102,10 @@ const getTeam = () =>{
       let employee; 
       if (role === "Engineer") {
           employee = new Engineer (name, id, email, github);
-          console.log(employee);
+          console.log(allEmployees);
       } else if (role === "Intern") {
           employee = new Intern (name, id, email, school);
-          console.log(employee);
+          console.log(allEmployees);
       }
       allEmployees.push(employee); 
       if (confirmGetTeam) {
