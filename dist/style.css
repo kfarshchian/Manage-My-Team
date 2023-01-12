@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+#allCard{
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    margin-top: 15px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+.card-header-title{
+    box-shadow: 0 0 1px 1px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: aqua;
+}
