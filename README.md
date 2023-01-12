@@ -22,7 +22,7 @@
   - npm i inquirer@8.2.4 
 
   ## Usage
-  ![alttext](./assets/images/{add name of picture here})
+  ![alttext](./assets/images/site.png)
   This project was made to show the power of Object-Oriented Programming, Node.js, and inquirer. Using all these programs together we only need to answer a few questions to add employees directly into a company directory via HTML rather than having to add them to the HTML individually. This project has the potential to save a developer time and move to other tasks that need more immediate attention. 
   
   ## Credits
