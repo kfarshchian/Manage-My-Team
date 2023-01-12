@@ -22,7 +22,7 @@
   - npm i inquirer@8.2.4 
 
   ## Usage
-  [![Watch the video]([https://drive.google.com/file/d/1jA2hXPdMQ78bybv8RancNzJYQFl0Bnlg/view](https://drive.google.com/file/d/1jA2hXPdMQ78bybv8RancNzJYQFl0Bnlg/view))
+  [![Watch the video](https://drive.google.com/file/d/1jA2hXPdMQ78bybv8RancNzJYQFl0Bnlg/view)
   
   ![alttext](./assets/images/site.png)
   This project was made to show the power of Object-Oriented Programming, Node.js, and inquirer. Using all these programs together we only need to answer a few questions to add employees directly into a company directory via HTML rather than having to add them to the HTML individually. This project has the potential to save a developer time and move to other tasks that need more immediate attention. 
